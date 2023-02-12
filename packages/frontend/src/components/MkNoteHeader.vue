@@ -19,6 +19,7 @@
 		</span>
 		<span v-if="note.localOnly" style="margin-left: 0.5em;" :title="i18n.ts._visibility['localOnly']"><i class="ti ti-world-off"></i></span>
 	</div>
+	<MkInstanceTicker :class="$style.ticker" :instance="note.user.instance"/>
 </header>
 </template>
 
@@ -28,6 +29,8 @@ import * as misskey from 'misskey-js';
 import { i18n } from '@/i18n';
 import { notePage } from '@/filters/note';
 import { userPage } from '@/filters/user';
+import { defaultStore, noteViewInterruptors } from '@/store';
+import MkInstanceTicker from '@/components/MkInstanceTicker.vue';
 
 defineProps<{
 	note: misskey.entities.Note;
