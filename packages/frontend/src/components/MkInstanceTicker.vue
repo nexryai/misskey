@@ -46,6 +46,7 @@ $height: 2ex;
 .icon {
 	height: $height;
 	vertical-align: middle;
+	border-radius: 4px;
 }
 
 .name {
