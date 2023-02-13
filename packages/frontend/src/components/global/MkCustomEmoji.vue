@@ -5,7 +5,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { getStaticImageUrl } from '@/scripts/media-proxy';
+import { getProxiedImageUrl, getStaticImageUrl } from '@/scripts/media-proxy';
 import { defaultStore } from '@/store';
 import { customEmojis } from '@/custom-emojis';
 
@@ -20,6 +20,9 @@ const props = defineProps<{
 const customEmojiName = computed(() => (props.name[0] === ':' ? props.name.substr(1, props.name.length - 2) : props.name).replace('@.', ''));
 
 const rawUrl = computed(() => {
+	if (props.url && props.host && customEmojiName.value.includes('@')) {
+		return getProxiedImageUrl(props.url);
+	}
 	if (props.url) {
 		return props.url;
 	}
