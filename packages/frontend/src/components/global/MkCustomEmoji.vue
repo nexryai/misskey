@@ -1,6 +1,6 @@
 <template>
 <span v-if="errored">:{{ customEmojiName }}:</span>
-<img v-else :class="[$style.root, { [$style.normal]: normal, [$style.noStyle]: noStyle }]" :src="rawUrl" :alt="alt" :title="alt" decoding="async" @error="errored = true" @load="errored = false"/>
+<img v-else :class="[$style.root, { [$style.normal]: normal, [$style.noStyle]: noStyle }]" :src="url" :alt="alt" :title="alt" decoding="async" @error="errored = true" @load="errored = false"/>
 </template>
 
 <script lang="ts" setup>
@@ -20,11 +20,8 @@ const props = defineProps<{
 const customEmojiName = computed(() => (props.name[0] === ':' ? props.name.substr(1, props.name.length - 2) : props.name).replace('@.', ''));
 
 const rawUrl = computed(() => {
-	if (props.url && props.host && customEmojiName.value.includes('@')) {
-		return getProxiedImageUrl(props.url);
-	}
 	if (props.url) {
-		return props.url;
+		return getProxiedImageUrl(props.url);
 	}
 	if (props.host == null && !customEmojiName.value.includes('@')) {
 		return customEmojis.value.find(x => x.name === customEmojiName.value)?.url || null;
