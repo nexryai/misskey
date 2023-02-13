@@ -6,7 +6,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import { getStaticImageUrl } from '@/scripts/media-proxy';
-import { getProxiedImageUrlNullable } from '@/scripts/media-proxy';
 import { defaultStore } from '@/store';
 import { customEmojis } from '@/custom-emojis';
 
@@ -30,15 +29,11 @@ const rawUrl = computed(() => {
 	return props.host ? `/emoji/${customEmojiName.value}@${props.host}.webp` : `/emoji/${customEmojiName.value}.webp`;
 });
 
-const url = computed(() => {
-	if (defaultStore.reactiveState.disableShowingAnimatedImages.value && rawUrl.value) {
-		return getStaticImageUrl(rawUrl.value);
-	}
-	if (props.host && customEmojiName.value.includes('@')) {
-		return getProxiedImageUrlNullable(rawUrl.value);
-	}
-	return rawUrl.value;
-});
+const url = computed(() =>
+	defaultStore.reactiveState.disableShowingAnimatedImages.value && rawUrl.value
+		? getStaticImageUrl(rawUrl.value)
+		: rawUrl.value
+);
 
 const alt = computed(() => `:${customEmojiName.value}:`);
 let errored = $ref(url.value == null);
