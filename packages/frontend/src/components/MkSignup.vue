@@ -56,6 +56,7 @@
 	<ul style="margin: 0; padding-left: 2em;">
 		<li v-if="instance.tosUrl"><a :href="instance.tosUrl" class="_link" target="_blank">{{ i18n.ts.tos }}</a></li>
 		<li><a href="https://misskey-hub.net/docs/notes.html" class="_link" target="_blank">{{ i18n.ts.basicNotesBeforeCreateAccount }}</a></li>
+		<li><a href="https://nexryai.online/docs/eula/" class="_link" target="_blank">EULA</a></li>
 	</ul>
 	<MkCaptcha v-if="instance.enableHcaptcha" ref="hcaptcha" v-model="hCaptchaResponse" class="captcha" provider="hcaptcha" :sitekey="instance.hcaptchaSiteKey"/>
 	<MkCaptcha v-if="instance.enableRecaptcha" ref="recaptcha" v-model="reCaptchaResponse" class="captcha" provider="recaptcha" :sitekey="instance.recaptchaSiteKey"/>
