@@ -84,6 +84,11 @@ const menuDef = computed(() => [{
 		to: '/settings/notifications',
 		active: currentPage?.route.name === 'notifications',
 	}, {
+		icon: 'ti ti-mail',
+		text: i18n.ts.email,
+		to: '/settings/email',
+		active: currentPage?.route.name === 'email',
+	}, {
 		icon: 'ti ti-lock',
 		text: i18n.ts.security,
 		to: '/settings/security',
