@@ -66,10 +66,6 @@ export const routes = [{
 		name: 'notifications',
 		component: page(() => import('./pages/settings/notifications.vue')),
 	}, {
-		path: '/email',
-		name: 'email',
-		component: page(() => import('./pages/settings/email.vue')),
-	}, {
 		path: '/security',
 		name: 'security',
 		component: page(() => import('./pages/settings/security.vue')),
