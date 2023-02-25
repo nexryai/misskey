@@ -1265,6 +1265,7 @@ _emailUnavailable:
   disposable: "恒久的に使用可能なアドレスではありません"
   mx: "正しいメールサーバーではありません"
   smtp: "メールサーバーが応答しません"
+  disabled: "インスタンスでメール配信がサポートされていません"
 
 _ffVisibility:
   public: "公開"
