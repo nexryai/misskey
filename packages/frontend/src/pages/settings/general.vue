@@ -193,6 +193,7 @@ watch([
 	showGapBetweenNotesInTimeline,
 	instanceTicker,
 	overridedDeviceKind,
+	ui,
 ], async () => {
 	await reloadAsk();
 });
