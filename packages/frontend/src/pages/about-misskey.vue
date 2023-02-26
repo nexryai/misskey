@@ -86,7 +86,7 @@
 				</FormSection>
 				<FormSection>
 					<template #label>Credits</template>
-					<p>Misskeyで使われる画像の一部は、許可を得て「あの子がこっちを見てるメーカー」で作成したものが含まれます。</p>
+					<p>このフォークで使われるアイコンの一部は、<a href="https://icons8.com">icons8</a>によるものです。</p>
 				</FormSection>
 			</div>
 		</MkSpacer>
