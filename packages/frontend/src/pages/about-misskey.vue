@@ -44,30 +44,10 @@
 				<FormSection>
 					<template #label>{{ i18n.ts._aboutMisskey.contributors }}</template>
 					<div :class="$style.contributors">
-						<a href="https://github.com/syuilo" target="_blank" :class="$style.contributor">
-							<img src="https://avatars.githubusercontent.com/u/4439005?v=4" :class="$style.contributorAvatar">
-							<span :class="$style.contributorUsername">@syuilo</span>
-						</a>
-						<a href="https://github.com/tamaina" target="_blank" :class="$style.contributor">
-							<img src="https://avatars.githubusercontent.com/u/7973572?v=4" :class="$style.contributorAvatar">
-							<span :class="$style.contributorUsername">@tamaina</span>
-						</a>
-						<a href="https://github.com/acid-chicken" target="_blank" :class="$style.contributor">
-							<img src="https://avatars.githubusercontent.com/u/20679825?v=4" :class="$style.contributorAvatar">
-							<span :class="$style.contributorUsername">@acid-chicken</span>
-						</a>
-						<a href="https://github.com/rinsuki" target="_blank" :class="$style.contributor">
-							<img src="https://avatars.githubusercontent.com/u/6533808?v=4" :class="$style.contributorAvatar">
-							<span :class="$style.contributorUsername">@rinsuki</span>
-						</a>
-						<a href="https://github.com/mei23" target="_blank" :class="$style.contributor">
-							<img src="https://avatars.githubusercontent.com/u/30769358?v=4" :class="$style.contributorAvatar">
-							<span :class="$style.contributorUsername">@mei23</span>
-						</a>
-						<a href="https://github.com/robflop" target="_blank" :class="$style.contributor">
-							<img src="https://avatars.githubusercontent.com/u/8159402?v=4" :class="$style.contributorAvatar">
-							<span :class="$style.contributorUsername">@robflop</span>
-						</a>
+						<div v-for="contributor in contributorsWithIcon" :class="$style.contributor">
+							<img :src="contributor.icon" :class="$style.contributorAvatar">
+							<a :href="contributor.url" target="_blank" :class="$style.contributorUsername">{{ contributor.name }}</a>
+						</div>
 					</div>
 					<template #caption><MkLink url="https://github.com/misskey-dev/misskey/graphs/contributors">{{ i18n.ts._aboutMisskey.allContributors }}</MkLink></template>
 				</FormSection>
@@ -109,6 +89,32 @@ import * as os from '@/os';
 import { definePageMetadata } from '@/scripts/page-metadata';
 import { claimAchievement, claimedAchievements } from '@/scripts/achievements';
 import { $i } from '@/account';
+
+const contributorsWithIcon=[{
+	name: '@syuilo',
+	icon: getProxiedImageUrl('https://avatars.githubusercontent.com/u/4439005?v=4'),
+	url: 'https://github.com/syuilo'
+}, {
+	name: '@tamaina',
+	icon: getProxiedImageUrl('https://avatars.githubusercontent.com/u/7973572?v=4'),
+	url: 'https://github.com/tamaina'
+}, {
+	name: '@acid-chicken',
+	icon: getProxiedImageUrl('https://avatars.githubusercontent.com/u/20679825?v=4'),
+	url: 'https://github.com/acid-chicken'
+}, {
+	name: '@rinsuki',
+	icon: getProxiedImageUrl('https://avatars.githubusercontent.com/u/6533808?v=4'),
+	url: 'https://github.com/rinsuki'
+}, {
+	name: '@mei23',
+	icon: getProxiedImageUrl('https://avatars.githubusercontent.com/u/30769358?v=4'),
+	url: 'https://github.com/mei23'
+}, {
+	name: '@robflop',
+	icon: getProxiedImageUrl('https://avatars.githubusercontent.com/u/8159402?v=4'),
+	url: 'https://github.com/robflop'
+}];
 
 const patronsWithIcon = [{
 	name: 'カイヤン',
