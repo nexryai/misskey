@@ -112,16 +112,16 @@ import { $i } from '@/account';
 
 const patronsWithIcon = [{
 	name: 'カイヤン',
-	icon: getProxiedImageUrl(https://misskey-hub.net/patrons/a2820716883e408cb87773e377ce7c8d.jpg),
+	icon: getProxiedImageUrl('https://misskey-hub.net/patrons/a2820716883e408cb87773e377ce7c8d.jpg'),
 }, {
 	name: 'だれかさん',
-	icon: getProxiedImageUrl(https://misskey-hub.net/patrons/f7409b5e5a88477a9b9d740c408de125.jpg),
+	icon: getProxiedImageUrl('https://misskey-hub.net/patrons/f7409b5e5a88477a9b9d740c408de125.jpg'),
 }, {
 	name: 'narazaka',
-	icon: getProxiedImageUrl(https://misskey-hub.net/patrons/e3affff31ffb4877b1196c7360abc3e5.jpg),
+	icon: getProxiedImageUrl('https://misskey-hub.net/patrons/e3affff31ffb4877b1196c7360abc3e5.jpg'),
 }, {
 	name: 'ひとぅ',
-	icon: getProxiedImageUrl(https://misskey-hub.net/patrons/8cc0d0a0a6d84c88bca1aedabf6ed5ab.jpg),
+	icon: getProxiedImageUrl('https://misskey-hub.net/patrons/8cc0d0a0a6d84c88bca1aedabf6ed5ab.jpg'),
 }];
 
 const patrons = [
