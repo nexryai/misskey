@@ -671,9 +671,17 @@ function showReactions(): void {
 	opacity: 0.7;
 }
 
-@container (max-width: 500px) {
+@container (max-width: 580px) {
 	.root {
-		font-size: 0.9em;
+		font-size: 0.95em;
+	}
+
+	.renote {
+		padding: 12px 26px 0 26px;
+	}
+
+	.article {
+		padding: 24px 26px 14px;
 	}
 
 	.avatar {
@@ -682,7 +690,21 @@ function showReactions(): void {
 	}
 }
 
-@container (max-width: 450px) {
+@container (max-width: 500px) {
+	.root {
+		font-size: 0.9em;
+	}
+
+	.renote {
+		padding: 10px 22px 0 22px;
+	}
+
+	.article {
+		padding: 20px 22px 12px;
+	}
+}
+
+@container (max-width: 480px) {
 	.renote {
 		padding: 8px 16px 0 16px;
 	}
@@ -699,7 +721,9 @@ function showReactions(): void {
 	.article {
 		padding: 14px 16px 9px;
 	}
+}
 
+@container (max-width: 450px) {
 	.avatar {
 		margin: 0 10px 8px 0;
 		width: 46px;
@@ -708,10 +732,18 @@ function showReactions(): void {
 	}
 }
 
-@container (max-width: 350px) {
+@container (max-width: 400px) {
 	.footerButton {
 		&:not(:last-child) {
 			margin-right: 18px;
+		}
+	}
+}
+
+@container (max-width: 350px) {
+	.footerButton {
+		&:not(:last-child) {
+			margin-right: 12px;
 		}
 	}
 }
@@ -724,7 +756,7 @@ function showReactions(): void {
 
 	.footerButton {
 		&:not(:last-child) {
-			margin-right: 12px;
+			margin-right: 8px;
 		}
 	}
 }
