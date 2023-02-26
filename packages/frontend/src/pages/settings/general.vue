@@ -19,6 +19,13 @@
 		<option value="tablet"><i class="ti ti-device-tablet"/> {{ i18n.ts.tablet }}</option>
 		<option value="desktop"><i class="ti ti-device-desktop"/> {{ i18n.ts.desktop }}</option>
 	</MkRadios>
+	
+	<MkRadios v-model="ui">
+		<template #label>{{ i18n.ts.switchUi }}</template>
+		<option value="default">{{ i18n.ts.default }}</option>
+		<option value="deck">{{ i18n.ts.tablet }}</option>
+		<option value="classic">{{ i18n.ts.classic }}</option>
+	</MkRadios>
 
 	<MkSwitch v-model="showFixedPostForm">{{ i18n.ts.showFixedPostForm }}</MkSwitch>
 
@@ -120,6 +127,7 @@ import { miLocalStorage } from '@/local-storage';
 const lang = ref(miLocalStorage.getItem('lang'));
 const fontSize = ref(miLocalStorage.getItem('fontSize'));
 const useSystemFont = ref(miLocalStorage.getItem('useSystemFont') != null);
+const ui = ref(miLocalStorage.getItem('ui'));
 
 async function reloadAsk() {
 	const { canceled } = await os.confirm({
