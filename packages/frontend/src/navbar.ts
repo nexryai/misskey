@@ -89,32 +89,4 @@ export const navbarItemDef = reactive({
 		show: computed(() => $i != null),
 		to: '/my/achievements',
 	},
-	ui: {
-		title: i18n.ts.switchUi,
-		icon: 'ti ti-devices',
-		action: (ev) => {
-			os.popupMenu([{
-				text: i18n.ts.default,
-				active: ui === 'default' || ui === null,
-				action: () => {
-					miLocalStorage.setItem('ui', 'default');
-					unisonReload();
-				},
-			}, {
-				text: i18n.ts.deck,
-				active: ui === 'deck',
-				action: () => {
-					miLocalStorage.setItem('ui', 'deck');
-					unisonReload();
-				},
-			}, {
-				text: i18n.ts.classic,
-				active: ui === 'classic',
-				action: () => {
-					miLocalStorage.setItem('ui', 'classic');
-					unisonReload();
-				},
-			}], ev.currentTarget ?? ev.target);
-		},
-	},
 });

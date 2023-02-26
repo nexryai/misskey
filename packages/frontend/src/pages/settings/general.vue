@@ -11,6 +11,8 @@
 			</I18n>
 		</template>
 	</MkSelect>
+	
+	<MkButton @click="switchUi"><i class="ti ti-devices"></i> {{ i18n.ts.switchUi }}</MkButton>
 
 	<MkRadios v-model="overridedDeviceKind">
 		<template #label>{{ i18n.ts.overridedDeviceKind }}</template>
@@ -18,13 +20,6 @@
 		<option value="smartphone"><i class="ti ti-device-mobile"/> {{ i18n.ts.smartphone }}</option>
 		<option value="tablet"><i class="ti ti-device-tablet"/> {{ i18n.ts.tablet }}</option>
 		<option value="desktop"><i class="ti ti-device-desktop"/> {{ i18n.ts.desktop }}</option>
-	</MkRadios>
-	
-	<MkRadios v-model="ui">
-		<template #label>{{ i18n.ts.switchUi }}</template>
-		<option value="default">{{ i18n.ts.default }}</option>
-		<option value="deck">{{ i18n.ts.tablet }}</option>
-		<option value="classic">{{ i18n.ts.classic }}</option>
 	</MkRadios>
 
 	<MkSwitch v-model="showFixedPostForm">{{ i18n.ts.showFixedPostForm }}</MkSwitch>
@@ -109,6 +104,7 @@
 
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue';
+import MkButton from '@/components/MkButton.vue';
 import MkSwitch from '@/components/MkSwitch.vue';
 import MkSelect from '@/components/MkSelect.vue';
 import MkRadios from '@/components/MkRadios.vue';
@@ -116,7 +112,7 @@ import MkRange from '@/components/MkRange.vue';
 import FormSection from '@/components/form/section.vue';
 import FormLink from '@/components/form/link.vue';
 import MkLink from '@/components/MkLink.vue';
-import { langs } from '@/config';
+import { langs, ui } from '@/config';
 import { defaultStore } from '@/store';
 import * as os from '@/os';
 import { unisonReload } from '@/scripts/unison-reload';
@@ -127,7 +123,6 @@ import { miLocalStorage } from '@/local-storage';
 const lang = ref(miLocalStorage.getItem('lang'));
 const fontSize = ref(miLocalStorage.getItem('fontSize'));
 const useSystemFont = ref(miLocalStorage.getItem('useSystemFont') != null);
-const ui = ref(miLocalStorage.getItem('ui'));
 
 async function reloadAsk() {
 	const { canceled } = await os.confirm({
@@ -193,7 +188,6 @@ watch([
 	showGapBetweenNotesInTimeline,
 	instanceTicker,
 	overridedDeviceKind,
-	ui,
 ], async () => {
 	await reloadAsk();
 });
@@ -206,4 +200,29 @@ definePageMetadata({
 	title: i18n.ts.general,
 	icon: 'ti ti-adjustments',
 });
+
+function switchUi(ev) {
+	os.popupMenu([{
+		text: i18n.ts.default,
+		active: ui === 'default' || ui === null,
+		action: () => {
+			miLocalStorage.setItem('ui', 'default');
+			unisonReload();
+		},
+	}, {
+		text: i18n.ts.deck,
+		active: ui === 'deck',
+		action: () => {
+			miLocalStorage.setItem('ui', 'deck');
+			unisonReload();
+		},
+	}, {
+		text: i18n.ts.classic,
+		active: ui === 'classic',
+		action: () => {
+			miLocalStorage.setItem('ui', 'classic');
+			unisonReload();
+		},
+	}], ev.currentTarget ?? ev.target);
+}
 </script>
