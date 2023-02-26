@@ -39,11 +39,6 @@ export const navbarItemDef = reactive({
 		indicated: computed(() => $i != null && $i.hasUnreadAnnouncement),
 		to: '/announcements',
 	},
-	search: {
-		title: i18n.ts.search,
-		icon: 'ti ti-search',
-		to: '/search',
-	},
 	lists: {
 		title: i18n.ts.lists,
 		icon: 'ti ti-list',
@@ -120,20 +115,6 @@ export const navbarItemDef = reactive({
 					unisonReload();
 				},
 			}], ev.currentTarget ?? ev.target);
-		},
-	},
-	about: {
-		title: i18n.ts.about,
-		icon: 'ti ti-info-circle',
-		action: (ev) => {
-			openInstanceMenu(ev);
-		},
-	},
-	reload: {
-		title: i18n.ts.reload,
-		icon: 'ti ti-refresh',
-		action: (ev) => {
-			location.reload();
 		},
 	},
 });

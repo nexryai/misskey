@@ -1,6 +1,5 @@
 <template>
 <MkStickyContainer>
-	<template #header><MkPageHeader :actions="headerActions" :tabs="headerTabs"/></template>
 	<MkSpacer :content-max="800">
 		<MkInput v-model="searchQuery" :large="true" :autofocus="true" :debounce="true" type="search" style="margin-bottom: var(--margin);" @update:model-value="search()">
 			<template #prefix><i class="ti ti-search"></i></template>

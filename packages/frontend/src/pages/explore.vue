@@ -11,6 +11,9 @@
 		<div v-else-if="tab === 'roles'">
 			<XRoles/>
 		</div>
+		<div v-else-if="tab === 'search'">
+			<XSearch/>
+		</div>
 	</div>
 </MkStickyContainer>
 </template>
@@ -20,6 +23,7 @@ import { computed, watch } from 'vue';
 import XFeatured from './explore.featured.vue';
 import XUsers from './explore.users.vue';
 import XRoles from './explore.roles.vue';
+import XSearch from './search.vue';
 import MkFoldableSection from '@/components/MkFoldableSection.vue';
 import { definePageMetadata } from '@/scripts/page-metadata';
 import { i18n } from '@/i18n';
@@ -44,6 +48,10 @@ const headerTabs = $computed(() => [{
 	key: 'featured',
 	icon: 'ti ti-bolt',
 	title: i18n.ts.featured,
+}, {
+	key: 'search',
+	icon: 'ti ti-search',
+	title: i18n.ts.search,
 }, {
 	key: 'users',
 	icon: 'ti ti-users',
