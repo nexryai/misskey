@@ -39,18 +39,6 @@ export const navbarItemDef = reactive({
 		indicated: computed(() => $i != null && $i.hasUnreadAnnouncement),
 		to: '/announcements',
 	},
-	lists: {
-		title: i18n.ts.lists,
-		icon: 'ti ti-list',
-		show: computed(() => $i != null),
-		to: '/my/lists',
-	},
-	antennas: {
-		title: i18n.ts.antennas,
-		icon: 'ti ti-antenna',
-		show: computed(() => $i != null),
-		to: '/my/antennas',
-	},
 	favorites: {
 		title: i18n.ts.favorites,
 		icon: 'ti ti-star',
@@ -71,12 +59,6 @@ export const navbarItemDef = reactive({
 		title: i18n.ts.gallery,
 		icon: 'ti ti-icons',
 		to: '/gallery',
-	},
-	clips: {
-		title: i18n.ts.clip,
-		icon: 'ti ti-paperclip',
-		show: computed(() => $i != null),
-		to: '/my/clips',
 	},
 	channels: {
 		title: i18n.ts.channel,

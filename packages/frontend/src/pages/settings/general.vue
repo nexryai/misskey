@@ -11,8 +11,6 @@
 			</I18n>
 		</template>
 	</MkSelect>
-	
-	<MkButton @click="switchUi"><i class="ti ti-devices"></i> {{ i18n.ts.switchUi }}</MkButton>
 
 	<MkRadios v-model="overridedDeviceKind">
 		<template #label>{{ i18n.ts.overridedDeviceKind }}</template>
@@ -22,6 +20,7 @@
 		<option value="desktop"><i class="ti ti-device-desktop"/> {{ i18n.ts.desktop }}</option>
 	</MkRadios>
 
+	<MkButton @click="switchUi"><i class="ti ti-devices"></i> {{ i18n.ts.switchUi }}</MkButton>
 	<MkSwitch v-model="showFixedPostForm">{{ i18n.ts.showFixedPostForm }}</MkSwitch>
 
 	<FormSection>

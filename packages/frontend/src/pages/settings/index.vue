@@ -140,6 +140,16 @@ const menuDef = computed(() => [{
 		to: '/settings/instance-mute',
 		active: currentPage?.route.name === 'instance-mute',
 	}, {
+		icon: 'ti ti-antenna',
+		text: i18n.ts.antennas,
+		to: '/my/antennas',
+		active: currentPage?.route.name === 'antennas',
+	}, {
+		icon: 'ti ti-list',
+		text: i18n.ts.lists,
+		to: '/my/lists',
+		active: currentPage?.route.name === 'lists',
+	}, {
 		icon: 'ti ti-ban',
 		text: i18n.ts.muteAndBlock,
 		to: '/settings/mute-block',

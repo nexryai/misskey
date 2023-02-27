@@ -1,6 +1,5 @@
 <template>
 <MkStickyContainer>
-	<template #header><MkPageHeader :actions="headerActions" :tabs="headerTabs"/></template>
 	<MkSpacer :content-max="700">
 		<div class="qtcaoidl">
 			<MkButton primary class="add" @click="create"><i class="ti ti-plus"></i> {{ i18n.ts.add }}</MkButton>
