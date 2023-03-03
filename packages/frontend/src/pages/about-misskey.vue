@@ -127,7 +127,14 @@ const patronsWithIcon = [{
 	icon: getProxiedImageUrl('https://misskey-hub.net/patrons/e3affff31ffb4877b1196c7360abc3e5.jpg'),
 }, {
 	name: 'ひとぅ',
+<<<<<<< HEAD
 	icon: getProxiedImageUrl('https://misskey-hub.net/patrons/8cc0d0a0a6d84c88bca1aedabf6ed5ab.jpg'),
+=======
+	icon: 'https://misskey-hub.net/patrons/8cc0d0a0a6d84c88bca1aedabf6ed5ab.jpg',
+}, {
+	name: 'ぱーこ',
+	icon: 'https://misskey-hub.net/patrons/79c6602ffade489e8df2fcf2c2bc5d9d.jpg',
+>>>>>>> da3fcf178e45ccaf7b2ca81fa03f029968777018
 }];
 
 const patrons = [
