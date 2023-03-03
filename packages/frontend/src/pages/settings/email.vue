@@ -38,7 +38,7 @@
 	</FormSection>
 </div>
 <div v-if="!instance.enableEmail" class="_gaps_m">
-	<MkInfo warn>{{ i18n.ts._forgotPassword.contactAdmin }}</MkInfo>
+	<MkInfo warn>{{ i18n.ts._emailUnavailable.emailNotSupported }}</MkInfo>
 </div>
 </template>
 
