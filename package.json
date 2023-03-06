@@ -1,6 +1,6 @@
 {
 	"name": "misskey",
-	"version": "13.9.1-nexryai-230303R2",
+	"version": "13.9.2-nexryai-230306R1",
 	"codename": "nasubi",
 	"repository": {
 		"type": "git",

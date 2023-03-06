@@ -214,6 +214,7 @@ const patrons = [
 	'pixeldesu',
 	'あめ玉',
 	'氷月氷華里',
+	'Ebise Lutica',
 ];
 
 let thereIsTreasure = $ref($i && !claimedAchievements.includes('foundTreasure'));
