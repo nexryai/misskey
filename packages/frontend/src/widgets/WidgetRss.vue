@@ -31,7 +31,7 @@ const name = 'rss';
 const widgetPropsDef = {
 	url: {
 		type: 'string' as const,
-		default: 'http://feeds.afpbb.com/rss/afpbb/afpbbnews',
+		default: 'https://gihyo.jp/feed/rss2',
 	},
 	refreshIntervalSec: {
 		type: 'number' as const,
@@ -39,7 +39,7 @@ const widgetPropsDef = {
 	},
 	maxEntries: {
 		type: 'number' as const,
-		default: 15,
+		default: 5,
 	},
 	showHeader: {
 		type: 'boolean' as const,

@@ -157,10 +157,10 @@ defaultStore.loaded.then(() => {
 			name: 'calendar',
 			id: 'a', place: 'right', data: {},
 		}, {
-			name: 'notifications',
+			name: 'rss',
 			id: 'b', place: 'right', data: {},
 		}, {
-			name: 'trends',
+			name: 'notifications',
 			id: 'c', place: 'right', data: {},
 		}]);
 	}
