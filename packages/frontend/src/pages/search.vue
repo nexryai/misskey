@@ -76,7 +76,7 @@ let userPagination = $ref();
 const notesSearchAvailable = (($i == null && instance.policies.canSearchNotes) || ($i != null && $i.policies.canSearchNotes));
 
 onMounted(() => {
-	tab = props.type ?? 'note';
+	tab = props.type ?? 'user';
 	searchQuery = props.query ?? '';
 	searchOrigin = props.origin ?? 'combined';
 });
