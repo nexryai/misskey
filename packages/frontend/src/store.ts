@@ -105,11 +105,9 @@ export const defaultStore = markRaw(new Storage('base', {
 			'notifications',
 			'followRequests',
 			'drive',
-			'achievements',
 			'-',
 			'explore',
 			'favorites',
-			'announcements',
 		],
 	},
 	visibility: {
@@ -361,7 +359,7 @@ export class ColdDeviceStorage {
 			return JSON.parse(value);
 		}
 	}
-
+a
 	public static getAll(): Partial<typeof this.default> {
 		return (Object.keys(this.default) as (keyof typeof this.default)[]).reduce((acc, key) => {
 			const value = localStorage.getItem(PREFIX + key);
