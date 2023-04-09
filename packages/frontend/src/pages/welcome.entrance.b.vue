@@ -2,7 +2,6 @@
 <div v-if="meta" class="rsqzvsbo">
 	<div class="top">
 		<MkFeaturedPhotos class="bg"/>
-		<XTimeline class="tl"/>
 		<div class="shape"></div>
 		<div class="main">
 			<h1>

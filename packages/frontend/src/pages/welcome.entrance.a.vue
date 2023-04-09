@@ -1,9 +1,6 @@
 <template>
 <div v-if="meta" class="rsqzvsbo">
 	<MkFeaturedPhotos class="bg"/>
-	<XTimeline class="tl"/>
-	<div class="shape1"></div>
-	<div class="shape2"></div>
 	<img src="/client-assets/misskey.svg" class="misskey"/>
 	<div class="emojis">
 		<MkEmoji :normal="true" :no-style="true" emoji="👍"/>
@@ -116,7 +113,7 @@ function exploreOtherServers() {
 		position: fixed;
 		top: 0;
 		right: 0;
-		width: 80vw; // 100%からshapeの幅を引いている
+		width: 100vw; // 100%からshapeの幅を引いている
 		height: 100vh;
 	}
 
