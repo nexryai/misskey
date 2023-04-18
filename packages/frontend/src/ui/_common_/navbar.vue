@@ -6,6 +6,11 @@
 			<button v-click-anime v-tooltip.noDelay.right="instance.name ?? i18n.ts.instance" class="item _button instance" @click="openInstanceMenu">
 				<img :src="instance.iconUrl || instance.faviconUrl || '/favicon.ico'" alt="" class="icon"/>
 			</button>
+			<div class="instance_info_text">
+				<I18n v-if="onlineUsersCount" :src="i18n.ts.onlineUsersCount" text-tag="span" class="text">
+					<template #n><b>{{ onlineUsersCount }}</b></template>
+				</I18n>
+			</div>
 		</div>
 		<div class="middle">
 			<MkA v-click-anime v-tooltip.noDelay.right="i18n.ts.timeline" class="item index" active-class="active" to="/" exact>
@@ -64,6 +69,7 @@ import { instance } from '@/instance';
 
 const iconOnly = ref(false);
 
+
 const menu = computed(() => defaultStore.state.menu);
 const otherMenuItemIndicated = computed(() => {
 	for (const def in navbarItemDef) {
@@ -97,6 +103,19 @@ function more(ev: MouseEvent) {
 	}, {
 	}, 'closed');
 }
+
+const onlineUsersCount = ref(0);
+
+const tick = () => {
+	os.api('get-online-users-count').then(res => {
+		onlineUsersCount.value = res.count;
+	});
+};
+
+useInterval(tick, 1000 * 15, {
+	immediate: true,
+	afterMounted: true,
+});
 </script>
 
 <style lang="scss" scoped>
@@ -149,16 +168,32 @@ function more(ev: MouseEvent) {
 					mask-image: linear-gradient(0deg, rgba(0,0,0,0) 15%, rgba(0,0,0,0.75) 100%);
 				}
 
+				> .instance_info {
+				display: flex;
+
 				> .instance {
 					position: relative;
 					display: block;
 					text-align: center;
-					width: 100%;
+					//width: 100%;
+					padding: 12px;
 
 					> .icon {
 						display: inline-block;
 						width: 38px;
 						aspect-ratio: 1;
+					}
+				}
+
+				> .instance_info_text {
+					margin-top: auto;
+					margin-bottom: auto;
+					margin-right: 12px;
+					> .instance_name {
+						font-size: small;
+					}
+					> .text {
+						font-size: smaller;
 					}
 				}
 			}
