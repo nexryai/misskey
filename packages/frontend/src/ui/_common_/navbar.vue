@@ -5,7 +5,7 @@
 			<div class="banner" :style="{ backgroundImage: `url(${ instance.bannerUrl })` }"></div>
 			<button v-click-anime v-tooltip.noDelay.right="instance.name ?? i18n.ts.instance" class="item _button instance" @click="openInstanceMenu">
 				<img :src="instance.iconUrl || instance.faviconUrl || '/favicon.ico'" alt="" class="icon"/>
-				<div class="instance_info" :style="{ display: flex }">
+				<div class="instance_info">
 					<div class="instance_info_text">
 						<I18n v-if="onlineUsersCount" :src="i18n.ts.onlineUsersCount" text-tag="span" class="text">
 							<template #n><b>{{ onlineUsersCount }}</b></template>
@@ -188,6 +188,7 @@ useInterval(tick, 1000 * 15, {
 					margin-top: auto;
 					margin-bottom: auto;
 					margin-right: 12px;
+					padding-top: 5px;
 					> .instance_name {
 						font-size: small;
 					}
