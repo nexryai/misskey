@@ -13,7 +13,7 @@
 			</MkTextarea>
 		</div>
 		<div v-show="tab === 'hard'" class="_gaps_m">
-			<MkInfo>{{ i18n.ts._wordMute.hardDescription }} {{ i18n.ts.reflectMayTakeTime }}</MkInfo>
+			<MkInfo warn>{{ i18n.ts._wordMute.hardDescription }} {{ i18n.ts.reflectMayTakeTime }}</MkInfo>
 			<MkTextarea v-model="hardMutedWords">
 				<span>{{ i18n.ts._wordMute.muteWords }}</span>
 				<template #caption>{{ i18n.ts._wordMute.muteWordsDescription }}<br>{{ i18n.ts._wordMute.muteWordsDescription2 }}</template>
