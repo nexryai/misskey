@@ -1,12 +1,9 @@
 <template>
 <div ref="el" class="hiyeyicy" :class="{ wide: !narrow }">
 	<div v-if="!narrow || currentPage?.route.name == null" class="nav">	
+		<template #header><MkPageHeader :actions="headerActions" :tabs="headerTabs"/></template>
 		<MkSpacer :content-max="700" :margin-min="16">
 			<div class="lxpfedzu">
-				<div class="banner">
-					<img :src="instance.iconUrl || '/favicon.ico'" alt="" class="icon"/>
-				</div>
-
 				<MkInfo v-if="thereIsUnresolvedAbuseReport" warn class="info">{{ i18n.ts.thereIsUnresolvedAbuseReportWarning }} <MkA to="/admin/abuses" class="_link">{{ i18n.ts.check }}</MkA></MkInfo>
 				<MkInfo v-if="noMaintainerInformation" warn class="info">{{ i18n.ts.noMaintainerInformationWarning }} <MkA to="/admin/settings" class="_link">{{ i18n.ts.configure }}</MkA></MkInfo>
 				<MkInfo v-if="noBotProtection" warn class="info">{{ i18n.ts.noBotProtectionWarning }} <MkA to="/admin/security" class="_link">{{ i18n.ts.configure }}</MkA></MkInfo>
@@ -33,6 +30,11 @@ import { lookupUser } from '@/scripts/lookup-user';
 import { useRouter } from '@/router';
 import { definePageMetadata, provideMetadataReceiver } from '@/scripts/page-metadata';
 
+
+const headerActions = $computed(() => []);
+
+const headerTabs = $computed(() => []);
+
 const isEmpty = (x: string | null) => x == null || x === '';
 
 const router = useRouter();
@@ -53,7 +55,7 @@ let el = $ref(null);
 let pageProps = $ref({});
 let noMaintainerInformation = isEmpty(instance.maintainerName) || isEmpty(instance.maintainerEmail);
 let noBotProtection = !instance.disableRegistration && !instance.enableHcaptcha && !instance.enableRecaptcha && !instance.enableTurnstile;
-let noEmailServer = !instance.enableEmail;
+let noEmailServer = !instance.disableRegistration && !instance.enableEmail;
 let thereIsUnresolvedAbuseReport = $ref(false);
 let currentPage = $computed(() => router.currentRef.value.child);
 
@@ -300,7 +302,6 @@ defineExpose({
 			width: 32%;
 			max-width: 280px;
 			box-sizing: border-box;
-			border-right: solid 0.5px var(--divider);
 			overflow: auto;
 			height: 100%;
 		}
