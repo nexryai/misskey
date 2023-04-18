@@ -31,10 +31,6 @@ import { useRouter } from '@/router';
 import { definePageMetadata, provideMetadataReceiver } from '@/scripts/page-metadata';
 
 
-const headerActions = $computed(() => []);
-
-const headerTabs = $computed(() => []);
-
 const isEmpty = (x: string | null) => x == null || x === '';
 
 const router = useRouter();
