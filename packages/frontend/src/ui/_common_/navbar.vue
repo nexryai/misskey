@@ -66,6 +66,7 @@ import { $i, openAccountMenu as openAccountMenu_ } from '@/account';
 import { defaultStore } from '@/store';
 import { i18n } from '@/i18n';
 import { instance } from '@/instance';
+import { useInterval } from '@/scripts/use-interval';
 
 const iconOnly = ref(false);
 
@@ -167,9 +168,6 @@ useInterval(tick, 1000 * 15, {
 					-webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0) 15%, rgba(0,0,0,0.75) 100%);
 					mask-image: linear-gradient(0deg, rgba(0,0,0,0) 15%, rgba(0,0,0,0.75) 100%);
 				}
-
-				> .instance_info {
-				display: flex;
 
 				> .instance {
 					position: relative;
