@@ -33,15 +33,6 @@
 			<div :class="$style.statsItemCount"><MkNumber :value="stats.originalNotesCount"/></div>
 		</div>
 	</div>
-	<div v-if="instance.policies.ltlAvailable" :class="[$style.tl, $style.panel]">
-		<div :class="$style.tlHeader">{{ i18n.ts.letsLookAtTimeline }}</div>
-		<div :class="$style.tlBody">
-			<MkTimeline src="local"/>
-		</div>
-	</div>
-	<div :class="[$style.activeUsersChart, $style.panel]">
-		<XActiveUsersChart/>
-	</div>
 </div>
 </template>
 
@@ -120,7 +111,7 @@ function exploreOtherServers() {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	padding: 32px 0 0 0;
+	padding: 14px 0 0 0;
 }
 
 .panel {

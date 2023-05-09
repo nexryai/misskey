@@ -10,29 +10,16 @@
 		<MkEmoji :normal="true" :no-style="true" emoji="🍮"/>
 	</div>
 	<div class="contents">
-		<div class="main">
-			<img :src="instance.iconUrl || instance.faviconUrl || '/favicon.ico'" alt="" class="icon"/>
-			<button class="_button _acrylic menu" @click="showMenu"><i class="ti ti-dots"></i></button>
-			<div class="fg">
-				<h1>
-					<!-- 背景色によってはロゴが見えなくなるのでとりあえず無効に -->
-					<!-- <img class="logo" v-if="meta.logoImageUrl" :src="meta.logoImageUrl"><span v-else class="text">{{ instanceName }}</span> -->
-					<span class="text">{{ instanceName }}</span>
-				</h1>
-				<div class="about">
-					<!-- eslint-disable-next-line vue/no-v-html -->
-					<div class="desc" v-html="meta.description || i18n.ts.headlineMisskey"></div>
-				</div>
-				<div v-if="instance.disableRegistration" class="warn">
-					<MkInfo warn>{{ i18n.ts.invitationRequiredToRegister }}</MkInfo>
-				</div>
-				<div class="action _gaps_s">
-					<MkButton full rounded gradate data-cy-signup style="margin-right: 12px;" @click="signup()">{{ i18n.ts.joinThisServer }}</MkButton>
-					<MkButton full rounded @click="exploreOtherServers()">{{ i18n.ts.exploreOtherServers }}</MkButton>
-					<MkButton full rounded data-cy-signin @click="signin()">{{ i18n.ts.login }}</MkButton>
-				</div>
-			</div>
-		</div>
+		<MkVisitorDashboard/>
+	</div>
+	<div v-if="instances && instances.length > 0" class="federation">
+		<MarqueeText :duration="40">
+			<MkA v-for="instance in instances" :key="instance.id" :class="$style.federationInstance" :to="`/instance-info/${instance.host}`" behavior="window">
+				<!--<MkInstanceCardMini :instance="instance"/>-->
+				<img v-if="instance.iconUrl" class="icon" :src="instance.iconUrl" alt=""/>
+				<span class="name _monospace">{{ instance.host }}</span>
+			</MkA>
+		</MarqueeText>
 	</div>
 </div>
 </template>
@@ -73,7 +60,7 @@ os.apiGet('federation/instances', {
 		position: fixed;
 		top: 0;
 		right: 0;
-		width: 100vw; // 100%からshapeの幅を引いている
+		width: 100vw;
 		height: 100vh;
 	}
 

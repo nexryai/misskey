@@ -78,4 +78,11 @@ export const navbarItemDef = reactive({
 		show: computed(() => $i != null),
 		to: '/my/achievements',
 	},
+	lookup: {
+		title: i18n.ts.lookup,
+		icon: 'ti ti-world-search',
+		action: (ev) => {
+			lookup();
+		},
+	},
 });
