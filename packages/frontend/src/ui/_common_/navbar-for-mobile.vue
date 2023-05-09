@@ -133,7 +133,7 @@ useInterval(tick, 1000 * 15, {
 					text-align: center;
 					//width: 100%;
 					padding: 12px;
-					padding-left: 7.7vh;
+					//padding-left: 7.7vh;
 	
 					> .icon {
 						display: inline-block;
