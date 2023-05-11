@@ -52,19 +52,6 @@
 					<template #caption><MkLink url="https://github.com/misskey-dev/misskey/graphs/contributors">{{ i18n.ts._aboutMisskey.allContributors }}</MkLink></template>
 				</FormSection>
 				<FormSection>
-					<template #label><Mfm text="$[jelly ❤]"/> {{ i18n.ts._aboutMisskey.patrons }}</template>
-					<div :class="$style.patronsWithIcon">
-						<div v-for="patron in patronsWithIcon" :class="$style.patronWithIcon">
-							<img :src="patron.icon" :class="$style.patronIcon">
-							<span :class="$style.patronName">{{ patron.name }}</span>
-						</div>
-					</div>
-					<div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); grid-gap: 12px;">
-						<div v-for="patron in patrons" :key="patron">{{ patron }}</div>
-					</div>
-					<p>{{ i18n.ts._aboutMisskey.morePatrons }}</p>
-				</FormSection>
-				<FormSection>
 					<template #label>Credits</template>
 					<p>このフォークで使われるアイコンの一部は、<a href="https://icons8.com">icons8</a>によるものです。</p>
 				</FormSection>
