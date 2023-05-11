@@ -1471,8 +1471,8 @@ _registry:
   createKey: "キーを作成"
 
 _aboutMisskey:
-  about: "Misskeyはsyuiloによって2014年から開発されている、オープンソースのソフトウェアです。"
-  contributors: "主なコントリビューター"
+  about: "Fork of Misskey by nexryai"
+  contributors: "主なアップストリームのコントリビューター"
   allContributors: "全てのコントリビューター"
   source: "ソースコード"
   translation: "Misskeyを翻訳"
