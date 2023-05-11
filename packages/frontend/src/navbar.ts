@@ -56,21 +56,11 @@ export const navbarItemDef = reactive({
 		icon: 'ti ti-player-play',
 		to: '/play',
 	},
-	gallery: {
-		title: i18n.ts.gallery,
-		icon: 'ti ti-icons',
-		to: '/gallery',
-	},
 	clips: {
 		title: i18n.ts.clip,
 		icon: 'ti ti-paperclip',
 		show: computed(() => $i != null),
 		to: '/my/clips',
-	},
-	channels: {
-		title: i18n.ts.channel,
-		icon: 'ti ti-device-tv',
-		to: '/channels',
 	},
 	achievements: {
 		title: i18n.ts.achievements,
