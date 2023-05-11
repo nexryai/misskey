@@ -181,23 +181,22 @@ defineExpose({
 		left: 0;
 		width: 500px;
 		height: 100vh;
-		background: var(--accent);
 
 		> .banner {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
+			height: 100%;
 			aspect-ratio: 1.5;
 			background-position: center;
 			background-size: cover;
-			-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
-			mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
 		}
 
 		> .dashboard {
 			position: relative;
 			padding: 32px;
+			padding-top: 60px;
 			box-sizing: border-box;
 			max-height: 100%;
 			overflow: auto;
