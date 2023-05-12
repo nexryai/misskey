@@ -47,7 +47,7 @@ import { $i } from '@/account';
 let isLocked = ref(false);
 let hideOnlineStatus = ref(false);
 let noCrawle = ref(false);
-let preventAiLearning = ref(true);
+let preventAiLearning = ref(false);
 
 watch([isLocked, hideOnlineStatus, noCrawle, preventAiLearning], () => {
 	os.api('i/update', {
