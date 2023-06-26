@@ -9,7 +9,7 @@
 		</div>
 	</MkSpacer>
 
-	<MkSpacer v-else-if="tab === 'user'" :content-max="800">
+	<MkSpacer v-else-if="tab === 'user'" :contentMax="800">
 		<XUser/>
 	</MkSpacer>
 </MkStickyContainer>

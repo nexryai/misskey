@@ -211,8 +211,4 @@ function exploreOtherServers() {
 	height: 350px;
 	overflow: auto;
 }
-
-.activeUsersChart {
-
-}
 </style>
