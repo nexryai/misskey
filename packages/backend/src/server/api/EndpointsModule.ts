@@ -250,7 +250,7 @@ import * as ep___notes_unrenote from './endpoints/notes/unrenote.js';
 import * as ep___notes_userListTimeline from './endpoints/notes/user-list-timeline.js';
 import * as ep___notifications_create from './endpoints/notifications/create.js';
 import * as ep___notifications_markAllAsRead from './endpoints/notifications/mark-all-as-read.js';
-
+import * as ep___pagePush from './endpoints/page-push.js';
 import * as ep___flash_create from './endpoints/flash/create.js';
 import * as ep___flash_delete from './endpoints/flash/delete.js';
 import * as ep___flash_featured from './endpoints/flash/featured.js';
