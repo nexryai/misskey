@@ -273,14 +273,7 @@ import * as ep___notes_unrenote from './endpoints/notes/unrenote.js';
 import * as ep___notes_userListTimeline from './endpoints/notes/user-list-timeline.js';
 import * as ep___notifications_create from './endpoints/notifications/create.js';
 import * as ep___notifications_markAllAsRead from './endpoints/notifications/mark-all-as-read.js';
-import * as ep___pagePush from './endpoints/page-push.js';
-import * as ep___pages_create from './endpoints/pages/create.js';
-import * as ep___pages_delete from './endpoints/pages/delete.js';
-import * as ep___pages_featured from './endpoints/pages/featured.js';
-import * as ep___pages_like from './endpoints/pages/like.js';
-import * as ep___pages_show from './endpoints/pages/show.js';
-import * as ep___pages_unlike from './endpoints/pages/unlike.js';
-import * as ep___pages_update from './endpoints/pages/update.js';
+
 import * as ep___flash_create from './endpoints/flash/create.js';
 import * as ep___flash_delete from './endpoints/flash/delete.js';
 import * as ep___flash_featured from './endpoints/flash/featured.js';
@@ -614,13 +607,6 @@ const $notes_userListTimeline: Provider = { provide: 'ep:notes/user-list-timelin
 const $notifications_create: Provider = { provide: 'ep:notifications/create', useClass: ep___notifications_create.default };
 const $notifications_markAllAsRead: Provider = { provide: 'ep:notifications/mark-all-as-read', useClass: ep___notifications_markAllAsRead.default };
 const $pagePush: Provider = { provide: 'ep:page-push', useClass: ep___pagePush.default };
-const $pages_create: Provider = { provide: 'ep:pages/create', useClass: ep___pages_create.default };
-const $pages_delete: Provider = { provide: 'ep:pages/delete', useClass: ep___pages_delete.default };
-const $pages_featured: Provider = { provide: 'ep:pages/featured', useClass: ep___pages_featured.default };
-const $pages_like: Provider = { provide: 'ep:pages/like', useClass: ep___pages_like.default };
-const $pages_show: Provider = { provide: 'ep:pages/show', useClass: ep___pages_show.default };
-const $pages_unlike: Provider = { provide: 'ep:pages/unlike', useClass: ep___pages_unlike.default };
-const $pages_update: Provider = { provide: 'ep:pages/update', useClass: ep___pages_update.default };
 const $flash_create: Provider = { provide: 'ep:flash/create', useClass: ep___flash_create.default };
 const $flash_delete: Provider = { provide: 'ep:flash/delete', useClass: ep___flash_delete.default };
 const $flash_featured: Provider = { provide: 'ep:flash/featured', useClass: ep___flash_featured.default };
@@ -958,13 +944,6 @@ const $retention: Provider = { provide: 'ep:retention', useClass: ep___retention
 		$notifications_create,
 		$notifications_markAllAsRead,
 		$pagePush,
-		$pages_create,
-		$pages_delete,
-		$pages_featured,
-		$pages_like,
-		$pages_show,
-		$pages_unlike,
-		$pages_update,
 		$flash_create,
 		$flash_delete,
 		$flash_featured,
@@ -1296,13 +1275,6 @@ const $retention: Provider = { provide: 'ep:retention', useClass: ep___retention
 		$notifications_create,
 		$notifications_markAllAsRead,
 		$pagePush,
-		$pages_create,
-		$pages_delete,
-		$pages_featured,
-		$pages_like,
-		$pages_show,
-		$pages_unlike,
-		$pages_update,
 		$flash_create,
 		$flash_delete,
 		$flash_featured,

@@ -258,17 +258,6 @@ export const routes = [{
 	path: '/tags/:tag',
 	component: page(() => import('./pages/tag.vue')),
 }, {
-	path: '/pages/new',
-	component: page(() => import('./pages/page-editor/page-editor.vue')),
-	loginRequired: true,
-}, {
-	path: '/pages/edit/:initPageId',
-	component: page(() => import('./pages/page-editor/page-editor.vue')),
-	loginRequired: true,
-}, {
-	path: '/pages',
-	component: page(() => import('./pages/pages.vue')),
-}, {
 	path: '/play/:id/edit',
 	component: page(() => import('./pages/flash/flash-edit.vue')),
 	loginRequired: true,

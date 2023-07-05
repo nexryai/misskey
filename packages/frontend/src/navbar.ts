@@ -46,11 +46,6 @@ export const navbarItemDef = reactive({
 		show: computed(() => $i != null),
 		to: '/my/favorites',
 	},
-	pages: {
-		title: i18n.ts.pages,
-		icon: 'ti ti-news',
-		to: '/pages',
-	},
 	play: {
 		title: 'Play',
 		icon: 'ti ti-player-play',
@@ -73,6 +68,13 @@ export const navbarItemDef = reactive({
 		icon: 'ti ti-world-search',
 		action: (ev) => {
 			lookup();
+		},
+	},
+	reload: {
+		title: i18n.ts.reload,
+		icon: 'ti ti-refresh',
+		action: (ev) => {
+			location.reload();
 		},
 	},
 });
