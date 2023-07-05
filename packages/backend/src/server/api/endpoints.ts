@@ -150,7 +150,6 @@ import * as ep___getOnlineUsersCount from './endpoints/get-online-users-count.js
 import * as ep___hashtags_list from './endpoints/hashtags/list.js';
 import * as ep___hashtags_search from './endpoints/hashtags/search.js';
 import * as ep___hashtags_show from './endpoints/hashtags/show.js';
-import * as ep___hashtags_trend from './endpoints/hashtags/trend.js';
 import * as ep___hashtags_users from './endpoints/hashtags/users.js';
 import * as ep___i from './endpoints/i.js';
 import * as ep___i_2fa_done from './endpoints/i/2fa/done.js';
@@ -252,13 +251,6 @@ import * as ep___notes_userListTimeline from './endpoints/notes/user-list-timeli
 import * as ep___notifications_create from './endpoints/notifications/create.js';
 import * as ep___notifications_markAllAsRead from './endpoints/notifications/mark-all-as-read.js';
 import * as ep___pagePush from './endpoints/page-push.js';
-import * as ep___pages_create from './endpoints/pages/create.js';
-import * as ep___pages_delete from './endpoints/pages/delete.js';
-import * as ep___pages_featured from './endpoints/pages/featured.js';
-import * as ep___pages_like from './endpoints/pages/like.js';
-import * as ep___pages_show from './endpoints/pages/show.js';
-import * as ep___pages_unlike from './endpoints/pages/unlike.js';
-import * as ep___pages_update from './endpoints/pages/update.js';
 import * as ep___flash_create from './endpoints/flash/create.js';
 import * as ep___flash_delete from './endpoints/flash/delete.js';
 import * as ep___flash_featured from './endpoints/flash/featured.js';
@@ -466,7 +458,6 @@ const eps = [
 	['hashtags/list', ep___hashtags_list],
 	['hashtags/search', ep___hashtags_search],
 	['hashtags/show', ep___hashtags_show],
-	['hashtags/trend', ep___hashtags_trend],
 	['hashtags/users', ep___hashtags_users],
 	['i', ep___i],
 	['i/2fa/done', ep___i_2fa_done],
@@ -568,13 +559,6 @@ const eps = [
 	['notifications/create', ep___notifications_create],
 	['notifications/mark-all-as-read', ep___notifications_markAllAsRead],
 	['page-push', ep___pagePush],
-	['pages/create', ep___pages_create],
-	['pages/delete', ep___pages_delete],
-	['pages/featured', ep___pages_featured],
-	['pages/like', ep___pages_like],
-	['pages/show', ep___pages_show],
-	['pages/unlike', ep___pages_unlike],
-	['pages/update', ep___pages_update],
 	['flash/create', ep___flash_create],
 	['flash/delete', ep___flash_delete],
 	['flash/featured', ep___flash_featured],

@@ -87,19 +87,6 @@ import * as ep___auth_session_userkey from './endpoints/auth/session/userkey.js'
 import * as ep___blocking_create from './endpoints/blocking/create.js';
 import * as ep___blocking_delete from './endpoints/blocking/delete.js';
 import * as ep___blocking_list from './endpoints/blocking/list.js';
-import * as ep___channels_create from './endpoints/channels/create.js';
-import * as ep___channels_featured from './endpoints/channels/featured.js';
-import * as ep___channels_follow from './endpoints/channels/follow.js';
-import * as ep___channels_followed from './endpoints/channels/followed.js';
-import * as ep___channels_owned from './endpoints/channels/owned.js';
-import * as ep___channels_show from './endpoints/channels/show.js';
-import * as ep___channels_timeline from './endpoints/channels/timeline.js';
-import * as ep___channels_unfollow from './endpoints/channels/unfollow.js';
-import * as ep___channels_update from './endpoints/channels/update.js';
-import * as ep___channels_favorite from './endpoints/channels/favorite.js';
-import * as ep___channels_unfavorite from './endpoints/channels/unfavorite.js';
-import * as ep___channels_myFavorites from './endpoints/channels/my-favorites.js';
-import * as ep___channels_search from './endpoints/channels/search.js';
 import * as ep___charts_activeUsers from './endpoints/charts/active-users.js';
 import * as ep___charts_apRequest from './endpoints/charts/ap-request.js';
 import * as ep___charts_drive from './endpoints/charts/drive.js';
@@ -159,20 +146,10 @@ import * as ep___following_requests_accept from './endpoints/following/requests/
 import * as ep___following_requests_cancel from './endpoints/following/requests/cancel.js';
 import * as ep___following_requests_list from './endpoints/following/requests/list.js';
 import * as ep___following_requests_reject from './endpoints/following/requests/reject.js';
-import * as ep___gallery_featured from './endpoints/gallery/featured.js';
-import * as ep___gallery_popular from './endpoints/gallery/popular.js';
-import * as ep___gallery_posts from './endpoints/gallery/posts.js';
-import * as ep___gallery_posts_create from './endpoints/gallery/posts/create.js';
-import * as ep___gallery_posts_delete from './endpoints/gallery/posts/delete.js';
-import * as ep___gallery_posts_like from './endpoints/gallery/posts/like.js';
-import * as ep___gallery_posts_show from './endpoints/gallery/posts/show.js';
-import * as ep___gallery_posts_unlike from './endpoints/gallery/posts/unlike.js';
-import * as ep___gallery_posts_update from './endpoints/gallery/posts/update.js';
 import * as ep___getOnlineUsersCount from './endpoints/get-online-users-count.js';
 import * as ep___hashtags_list from './endpoints/hashtags/list.js';
 import * as ep___hashtags_search from './endpoints/hashtags/search.js';
 import * as ep___hashtags_show from './endpoints/hashtags/show.js';
-import * as ep___hashtags_trend from './endpoints/hashtags/trend.js';
 import * as ep___hashtags_users from './endpoints/hashtags/users.js';
 import * as ep___i from './endpoints/i.js';
 import * as ep___i_2fa_done from './endpoints/i/2fa/done.js';
@@ -420,19 +397,6 @@ const $auth_session_userkey: Provider = { provide: 'ep:auth/session/userkey', us
 const $blocking_create: Provider = { provide: 'ep:blocking/create', useClass: ep___blocking_create.default };
 const $blocking_delete: Provider = { provide: 'ep:blocking/delete', useClass: ep___blocking_delete.default };
 const $blocking_list: Provider = { provide: 'ep:blocking/list', useClass: ep___blocking_list.default };
-const $channels_create: Provider = { provide: 'ep:channels/create', useClass: ep___channels_create.default };
-const $channels_featured: Provider = { provide: 'ep:channels/featured', useClass: ep___channels_featured.default };
-const $channels_follow: Provider = { provide: 'ep:channels/follow', useClass: ep___channels_follow.default };
-const $channels_followed: Provider = { provide: 'ep:channels/followed', useClass: ep___channels_followed.default };
-const $channels_owned: Provider = { provide: 'ep:channels/owned', useClass: ep___channels_owned.default };
-const $channels_show: Provider = { provide: 'ep:channels/show', useClass: ep___channels_show.default };
-const $channels_timeline: Provider = { provide: 'ep:channels/timeline', useClass: ep___channels_timeline.default };
-const $channels_unfollow: Provider = { provide: 'ep:channels/unfollow', useClass: ep___channels_unfollow.default };
-const $channels_update: Provider = { provide: 'ep:channels/update', useClass: ep___channels_update.default };
-const $channels_favorite: Provider = { provide: 'ep:channels/favorite', useClass: ep___channels_favorite.default };
-const $channels_unfavorite: Provider = { provide: 'ep:channels/unfavorite', useClass: ep___channels_unfavorite.default };
-const $channels_myFavorites: Provider = { provide: 'ep:channels/my-favorites', useClass: ep___channels_myFavorites.default };
-const $channels_search: Provider = { provide: 'ep:channels/search', useClass: ep___channels_search.default };
 const $charts_activeUsers: Provider = { provide: 'ep:charts/active-users', useClass: ep___charts_activeUsers.default };
 const $charts_apRequest: Provider = { provide: 'ep:charts/ap-request', useClass: ep___charts_apRequest.default };
 const $charts_drive: Provider = { provide: 'ep:charts/drive', useClass: ep___charts_drive.default };
@@ -492,20 +456,10 @@ const $following_requests_accept: Provider = { provide: 'ep:following/requests/a
 const $following_requests_cancel: Provider = { provide: 'ep:following/requests/cancel', useClass: ep___following_requests_cancel.default };
 const $following_requests_list: Provider = { provide: 'ep:following/requests/list', useClass: ep___following_requests_list.default };
 const $following_requests_reject: Provider = { provide: 'ep:following/requests/reject', useClass: ep___following_requests_reject.default };
-const $gallery_featured: Provider = { provide: 'ep:gallery/featured', useClass: ep___gallery_featured.default };
-const $gallery_popular: Provider = { provide: 'ep:gallery/popular', useClass: ep___gallery_popular.default };
-const $gallery_posts: Provider = { provide: 'ep:gallery/posts', useClass: ep___gallery_posts.default };
-const $gallery_posts_create: Provider = { provide: 'ep:gallery/posts/create', useClass: ep___gallery_posts_create.default };
-const $gallery_posts_delete: Provider = { provide: 'ep:gallery/posts/delete', useClass: ep___gallery_posts_delete.default };
-const $gallery_posts_like: Provider = { provide: 'ep:gallery/posts/like', useClass: ep___gallery_posts_like.default };
-const $gallery_posts_show: Provider = { provide: 'ep:gallery/posts/show', useClass: ep___gallery_posts_show.default };
-const $gallery_posts_unlike: Provider = { provide: 'ep:gallery/posts/unlike', useClass: ep___gallery_posts_unlike.default };
-const $gallery_posts_update: Provider = { provide: 'ep:gallery/posts/update', useClass: ep___gallery_posts_update.default };
 const $getOnlineUsersCount: Provider = { provide: 'ep:get-online-users-count', useClass: ep___getOnlineUsersCount.default };
 const $hashtags_list: Provider = { provide: 'ep:hashtags/list', useClass: ep___hashtags_list.default };
 const $hashtags_search: Provider = { provide: 'ep:hashtags/search', useClass: ep___hashtags_search.default };
 const $hashtags_show: Provider = { provide: 'ep:hashtags/show', useClass: ep___hashtags_show.default };
-const $hashtags_trend: Provider = { provide: 'ep:hashtags/trend', useClass: ep___hashtags_trend.default };
 const $hashtags_users: Provider = { provide: 'ep:hashtags/users', useClass: ep___hashtags_users.default };
 const $i: Provider = { provide: 'ep:i', useClass: ep___i.default };
 const $i_2fa_done: Provider = { provide: 'ep:i/2fa/done', useClass: ep___i_2fa_done.default };
@@ -757,19 +711,6 @@ const $retention: Provider = { provide: 'ep:retention', useClass: ep___retention
 		$blocking_create,
 		$blocking_delete,
 		$blocking_list,
-		$channels_create,
-		$channels_featured,
-		$channels_follow,
-		$channels_followed,
-		$channels_owned,
-		$channels_show,
-		$channels_timeline,
-		$channels_unfollow,
-		$channels_update,
-		$channels_favorite,
-		$channels_unfavorite,
-		$channels_myFavorites,
-		$channels_search,
 		$charts_activeUsers,
 		$charts_apRequest,
 		$charts_drive,
@@ -829,20 +770,10 @@ const $retention: Provider = { provide: 'ep:retention', useClass: ep___retention
 		$following_requests_cancel,
 		$following_requests_list,
 		$following_requests_reject,
-		$gallery_featured,
-		$gallery_popular,
-		$gallery_posts,
-		$gallery_posts_create,
-		$gallery_posts_delete,
-		$gallery_posts_like,
-		$gallery_posts_show,
-		$gallery_posts_unlike,
-		$gallery_posts_update,
 		$getOnlineUsersCount,
 		$hashtags_list,
 		$hashtags_search,
 		$hashtags_show,
-		$hashtags_trend,
 		$hashtags_users,
 		$i,
 		$i_2fa_done,
@@ -1088,19 +1019,6 @@ const $retention: Provider = { provide: 'ep:retention', useClass: ep___retention
 		$blocking_create,
 		$blocking_delete,
 		$blocking_list,
-		$channels_create,
-		$channels_featured,
-		$channels_follow,
-		$channels_followed,
-		$channels_owned,
-		$channels_show,
-		$channels_timeline,
-		$channels_unfollow,
-		$channels_update,
-		$channels_favorite,
-		$channels_unfavorite,
-		$channels_myFavorites,
-		$channels_search,
 		$charts_activeUsers,
 		$charts_apRequest,
 		$charts_drive,
@@ -1160,20 +1078,10 @@ const $retention: Provider = { provide: 'ep:retention', useClass: ep___retention
 		$following_requests_cancel,
 		$following_requests_list,
 		$following_requests_reject,
-		$gallery_featured,
-		$gallery_popular,
-		$gallery_posts,
-		$gallery_posts_create,
-		$gallery_posts_delete,
-		$gallery_posts_like,
-		$gallery_posts_show,
-		$gallery_posts_unlike,
-		$gallery_posts_update,
 		$getOnlineUsersCount,
 		$hashtags_list,
 		$hashtags_search,
 		$hashtags_show,
-		$hashtags_trend,
 		$hashtags_users,
 		$i,
 		$i_2fa_done,
